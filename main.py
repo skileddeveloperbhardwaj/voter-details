@@ -21,7 +21,7 @@ def main(page: ft.Page):
     def fetch_details(e):
         project = os.path.dirname(os.path.abspath(__file__))
         print(project)
-        path = project + "\\" + "records.csv"
+        path = project + '\' + "records.csv"
         res = 'Not Found'
         with open(path, mode='r') as file:
             csvFile = csv.reader(file)
