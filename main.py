@@ -4,6 +4,7 @@ import os
 
 def main(page: ft.Page):
     page.title = "Flet counter example"
+    page.auto_scroll = True
     page.theme_mode = ft.ThemeMode.LIGHT
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
 
@@ -21,7 +22,8 @@ def main(page: ft.Page):
     def fetch_details(e):
         project = os.path.dirname(os.path.abspath(__file__))
         print(project)
-        path = project + "\\" + "records.csv"
+        path = os.path.join(project, "records.csv")
+        print(path)
         res = 'Not Found'
         with open(path, mode='r') as file:
             csvFile = csv.reader(file)
