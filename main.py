@@ -24,6 +24,8 @@ def main(page: ft.Page):
             for lines in csvFile:
                 if(lines[2] == '3316245'):
                     emp_details.value = str(lines)
+                else:
+                    emp_details.value = 'Value Not found!'
 
     page.add(
         ft.Row(
