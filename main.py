@@ -22,6 +22,7 @@ def main(page: ft.Page):
                 ft.IconButton(ft.icons.REMOVE, on_click=minus_click),
                 txt_number,
                 ft.IconButton(ft.icons.ADD, on_click=plus_click),
+                ft.ElevatedButton(text="Elevated button"),
             ],
             alignment=ft.MainAxisAlignment.CENTER,
         )
