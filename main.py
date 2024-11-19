@@ -13,15 +13,15 @@ def main(page: ft.Page):
         page.update()
 
     def plus_click(e):
-        # mydataset = {
-        #    'cars': ["BMW", "Volvo", "Ford"],
-        #     'passings': [3, 7, 2]
-        # }
+        mydataset = {
+           'cars': ["BMW", "Volvo", "Ford"],
+            'passings': [3, 7, 2]
+        }
 
-        # myvar = pd.DataFrame(mydataset)
+        myvar = pd.DataFrame(mydataset)
         # print(type(str(myvar)))
-        txt_number.value = str(int(txt_number.value) + 1)
-        # txt_number.value = str(myvar)
+        # txt_number.value = str(int(txt_number.value) + 1)
+        txt_number.value = str(myvar)
         page.update()
 
     page.add(
@@ -30,7 +30,7 @@ def main(page: ft.Page):
                 # ft.IconButton(ft.icons.REMOVE, on_click=minus_click),
                 txt_number,
                 ft.IconButton(ft.icons.ADD, on_click=plus_click),
-                # ft.FilledButton(text="Filled button", on_click=plus_click),
+                ft.FilledButton(text="Filled button", on_click=plus_click),
             ],
             alignment=ft.MainAxisAlignment.CENTER,
         )
