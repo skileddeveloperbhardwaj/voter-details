@@ -1,12 +1,12 @@
 import flet as ft
-import pandas as pd
+
 
 def main(page: ft.Page):
-    page.title = "Employee Voting Details"
+    page.title = "Flet counter example"
     page.theme_mode = ft.ThemeMode.LIGHT
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
 
-    txt_number = ft.TextField(value="Employee Number", text_align=ft.TextAlign.RIGHT, width=200)
+    txt_number = ft.TextField(value="0", text_align=ft.TextAlign.RIGHT, width=100)
 
     def minus_click(e):
         txt_number.value = str(int(txt_number.value) - 1)
